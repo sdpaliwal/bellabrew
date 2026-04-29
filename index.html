@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bella Brew — A cosy café in Nagpur. Artisan coffee, handmade food & beautiful ambience. Book your table online.">
+  <meta name="theme-color" content="#6B3E26">
+  <title>Bella Brew — Café · Nagpur</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+</head>
+<body>
+
+<!-- =====================
+     SITE WRAPPER
+     ===================== -->
+<div id="siteWrapper">
+
+  <!-- NAVBAR -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <div class="nav-logo">Bella <span>Brew</span></div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#booking">Reserve</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div style="display:flex;align-items:center;gap:10px">
+        <button class="nav-cta" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Book a Table</button>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <!-- Mobile nav drawer -->
+    <nav class="mobile-nav" id="mobileNav">
+      <a href="#hero">Home</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#menu">Menu</a>
+      <a href="#booking">Reserve</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+      <a href="#booking" class="btn-primary">Book a Table</a>
+    </nav>
+  </nav>
+
+  <!-- =====================
+       HERO SECTION
+       ===================== -->
+  <section id="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-blob b1"></div>
+    <div class="hero-blob b2"></div>
+    <div class="container">
+      <div class="hero-inner">
+        <div class="hero-content">
+          <div class="section-tag">☕ Est. 2022 · Nagpur</div>
+          <h1 class="hero-title">Where Every<br>Sip Tells a<br><em>Story</em></h1>
+          <p class="hero-sub">A cosy corner in the heart of Nagpur — crafted brews, handpicked flavours, and memories made over every cup.</p>
+          <div class="hero-btns">
+            <button class="btn-primary" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">Explore Menu</button>
+            <button class="btn-outline" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'})">Reserve a Table</button>
+          </div>
+          <div class="hero-stats">
+            <div>
+              <div class="stat-num">409+</div>
+              <div class="stat-label">Happy Guests</div>
+            </div>
+            <div>
+              <div class="stat-num">3.9★</div>
+              <div class="stat-label">Google Rating</div>
+            </div>
+            <div>
+              <div class="stat-num">Daily</div>
+              <div class="stat-label">12 PM – 11 PM</div>
+            </div>
+          </div>
+        </div>
+        <div class="hero-image">
+          <!-- Replace src with your actual café photo -->
+          <div class="hero-image-placeholder">
+            <svg width="56" height="56" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <rect x="3" y="3" width="18" height="18" rx="3"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <path d="m21 15-5-5L5 21"/>
+            </svg>
+            <p>Add your café photo<br><small>Replace in index.html</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       GALLERY
+       ===================== -->
+  <section id="gallery">
+    <div class="container">
+      <div class="page-header">
+        <div class="section-tag">Gallery</div>
+        <h2>Inside Bella Brew</h2>
+        <div class="divider"></div>
+        <p>A glimpse of our cosy space and beautiful moments</p>
+      </div>
+
+      <!-- Upload zone (owner visible; hide with CSS if you want customer-only view) -->
+      <div class="gallery-upload-zone" id="galleryUploadZone">
+        <input type="file" id="galleryFileInput" multiple accept="image/*" style="display:none">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#6B3E26" stroke-width="1.5" opacity="0.5">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+          <polyline points="17 8 12 3 7 8"/>
+          <line x1="12" y1="3" x2="12" y2="15"/>
+        </svg>
+        <p>Drag & drop photos or click to upload</p>
+        <button class="btn-gold" style="margin-top:0.75rem">Choose Photos</button>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <!-- Placeholder items — replace with real <img> tags -->
+        <div class="gallery-item"><div class="gallery-item-placeholder">☕<br>Interior</div></div>
+        <div class="gallery-item" style="background:linear-gradient(135deg,#C4914F,#8B5E3C)"><div class="gallery-item-placeholder">🌿<br>Outdoor</div></div>
+        <div class="gallery-item" style="background:linear-gradient(135deg,#A0725A,#6B3E26)"><div class="gallery-item-placeholder">🍕<br>Food</div></div>
+        <div class="gallery-item" style="background:linear-gradient(135deg,#E8C99A,#C4914F)"><div class="gallery-item-placeholder">☕<br>Drinks</div></div>
+        <div class="gallery-item" style="background:linear-gradient(135deg,#B87D5E,#7A4A2C)"><div class="gallery-item-placeholder">✨<br>Ambience</div></div>
+        <div class="gallery-item" style="background:linear-gradient(135deg,#D4B896,#A07850)"><div class="gallery-item-placeholder">🎉<br>Events</div></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:9999;align-items:center;justify-content:center;padding:1rem">
+    <button onclick="closeLightbox()" style="position:absolute;top:18px;right:22px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer">×</button>
+    <img id="lightboxImg" src="" alt="Gallery" style="max-width:90vw;max-height:90vh;border-radius:12px;object-fit:contain">
+  </div>
+
+  <!-- =====================
+       MENU
+       ===================== -->
+  <section id="menu">
+    <div class="container">
+      <div class="page-header">
+        <div class="section-tag">Our Menu</div>
+        <h2>Crafted with Care</h2>
+        <div class="divider"></div>
+        <p>From artisan brews to handmade bites</p>
+      </div>
+
+      <div class="menu-upload-bar">
+        <div>
+          <strong style="font-size:0.9rem">Upload Menu PDF / Image</strong>
+          <p>Owner: upload your latest menu file here</p>
+        </div>
+        <div>
+          <input type="file" id="menuFileInput" accept="image/*,.pdf" style="display:none"
+            onchange="alert('Menu file uploaded! In production this saves to your server.')">
+          <button class="btn-gold" onclick="document.getElementById('menuFileInput').click()">Upload Menu</button>
+        </div>
+      </div>
+
+      <div class="menu-tabs">
+        <button class="menu-tab active" onclick="setMenuFilter('all',this)">All</button>
+        <button class="menu-tab" onclick="setMenuFilter('coffee',this)">Coffee</button>
+        <button class="menu-tab" onclick="setMenuFilter('drinks',this)">Drinks</button>
+        <button class="menu-tab" onclick="setMenuFilter('food',this)">Food</button>
+        <button class="menu-tab" onclick="setMenuFilter('dessert',this)">Desserts</button>
+      </div>
+
+      <div class="menu-grid" id="menuGrid">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       BOOKING
+       ===================== -->
+  <section id="booking">
+    <div class="container">
+      <div class="page-header">
+        <div class="section-tag">Reservations</div>
+        <h2>Reserve Your Table</h2>
+        <div class="divider"></div>
+        <p>Make every visit memorable — tell us the occasion!</p>
+      </div>
+
+      <div class="booking-grid">
+        <!-- FORM -->
+        <div class="booking-form-card">
+          <h3>Book a Table</h3>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Full Name</label>
+              <input type="text" id="bName" placeholder="Your name">
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" id="bPhone" placeholder="+91 XXXXX XXXXX" maxlength="13">
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label>Date</label>
+              <input type="date" id="bDate">
+            </div>
+            <div class="form-group">
+              <label>Number of Guests</label>
+              <select id="bGuests">
+                <option value="1">1 Guest</option>
+                <option value="2" selected>2 Guests</option>
+                <option value="3">3 Guests</option>
+                <option value="4">4 Guests</option>
+                <option value="5">5 Guests</option>
+                <option value="6">6 Guests</option>
+                <option value="8">7–8 Guests</option>
+                <option value="12">9–12 Guests</option>
+                <option value="15">13–15 Guests</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Select Occasion</label>
+            <div class="occasion-chips">
+              <button class="chip">💑 First Date</button>
+              <button class="chip">💍 Anniversary</button>
+              <button class="chip">🎂 Birthday</button>
+              <button class="chip">👨‍👩‍👧 Family</button>
+              <button class="chip">💼 Business</button>
+              <button class="chip">🎓 Graduation</button>
+              <button class="chip">💝 Proposal</button>
+              <button class="chip">☕ Casual</button>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label>Special Requests</label>
+            <textarea id="bNote" rows="3" placeholder="Candles, cake arrangements, dietary needs, quiet corner..."></textarea>
+          </div>
+
+          <button class="btn-primary" style="width:100%;padding:14px" onclick="submitBooking()">
+            Confirm Reservation
+          </button>
+          <div id="bookingToast" class="toast"></div>
+        </div>
+
+        <!-- INFO SIDEBAR -->
+        <div class="booking-info">
+          <div class="info-card">
+            <h4>⏰ Opening Hours</h4>
+            <p>Monday – Sunday<br><strong>12:00 PM – 11:00 PM</strong><br>Open all 7 days</p>
+          </div>
+
+          <div class="info-card">
+            <h4>📍 Location</h4>
+            <p>Prabha Sadan, Plot No. 17<br>JB Thakkar Marg, near Gorepeth<br>Nagpur, Maharashtra 440010</p>
+          </div>
+
+          <div class="info-card">
+            <h4>🕐 Available Time Slots</h4>
+            <div class="time-slots">
+              <div class="time-slot">12:00 PM</div>
+              <div class="time-slot">1:30 PM</div>
+              <div class="time-slot">3:00 PM</div>
+              <div class="time-slot booked">5:00 PM</div>
+              <div class="time-slot">6:30 PM</div>
+              <div class="time-slot">7:00 PM</div>
+              <div class="time-slot booked">8:00 PM</div>
+              <div class="time-slot">9:00 PM</div>
+              <div class="time-slot">10:00 PM</div>
+            </div>
+            <p style="font-size:0.75rem;color:#8B7355;margin-top:8px">Gray slots are already booked</p>
+          </div>
+
+          <div class="info-card">
+            <h4>📞 Call to Reserve</h4>
+            <p><strong style="font-size:1.1rem;color:#6B3E26">+91 96653 80500</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       REVIEWS
+       ===================== -->
+  <section id="reviews">
+    <div class="container">
+      <div class="page-header">
+        <div class="section-tag">Reviews</div>
+        <h2>What Our Guests Say</h2>
+        <div class="divider"></div>
+        <p>Real experiences from our lovely visitors</p>
+      </div>
+
+      <div class="reviews-grid" id="reviewsGrid">
+        <!-- Rendered by JS -->
+      </div>
+
+      <!-- Write a review -->
+      <div class="write-review">
+        <h3>Share Your Experience</h3>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Your Name</label>
+            <input type="text" id="rName" placeholder="Your name">
+          </div>
+          <div class="form-group">
+            <label>Visit Type</label>
+            <select id="rVisit">
+              <option>Casual visit</option>
+              <option>Date night</option>
+              <option>Anniversary</option>
+              <option>Birthday</option>
+              <option>Business meeting</option>
+              <option>Family outing</option>
+              <option>Graduation</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Your Rating</label>
+          <div class="star-input" id="starInput">
+            <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Your Review</label>
+          <textarea id="rText" rows="4" placeholder="Tell others about your experience at Bella Brew..."></textarea>
+        </div>
+        <button class="btn-primary" onclick="submitReview()">Post Review</button>
+        <div id="reviewToast" class="toast"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================
+       CONTACT / SOCIAL
+       ===================== -->
+  <section id="contact">
+    <div class="container">
+      <div class="page-header">
+        <div class="section-tag">Connect</div>
+        <h2>Find Us Online</h2>
+        <div class="divider"></div>
+        <p>Follow our journey and stay updated</p>
+      </div>
+
+      <div class="social-grid">
+        <a href="https://www.instagram.com/bellabrewnagpur" target="_blank" rel="noopener" class="social-card">
+          <div class="social-icon" style="background:#FCE4EC">📸</div>
+          <h4>Instagram</h4>
+          <p>@bellabrewnagpur</p>
+        </a>
+        <a href="#" class="social-card">
+          <div class="social-icon" style="background:#E3F2FD">📘</div>
+          <h4>Facebook</h4>
+          <p>Add your page link</p>
+        </a>
+        <a href="#" class="social-card">
+          <div class="social-icon" style="background:#FFF8E1">🍽️</div>
+          <h4>Zomato</h4>
+          <p>Order online</p>
+        </a>
+        <a href="#" class="social-card">
+          <div class="social-icon" style="background:#E8F5E9">🛵</div>
+          <h4>Swiggy</h4>
+          <p>Deliver to your door</p>
+        </a>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div>
+            <div class="contact-label">Address</div>
+            <div class="contact-val">Prabha Sadan, Plot 17, JB Thakkar Marg, Gorepeth, Nagpur 440010</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">📞</div>
+          <div>
+            <div class="contact-label">Phone</div>
+            <div class="contact-val">+91 96653 80500</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">🕐</div>
+          <div>
+            <div class="contact-label">Hours</div>
+            <div class="contact-val">12:00 PM – 11:00 PM · Daily</div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div>
+            <div class="contact-label">Email</div>
+            <div class="contact-val">hello@bellabrew.in</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Google Maps Embed -->
+      <div class="map-section" style="margin-top:2.5rem">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d241.05!2d79.0649856!3d21.1448186!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bd4c1c6fbc153e5%3A0x597efe8e964f0692!2sBella%20brew!5e0!3m2!1sen!2sin!4v1"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+          title="Bella Brew location map">
+        </iframe>
+      </div>
+
+      <!-- Owner Dashboard Link -->
+      <div style="text-align:center;margin-top:3rem;padding-top:2rem;border-top:1px solid rgba(107,62,38,0.12)">
+        <button onclick="openOwnerLogin()" style="background:none;border:none;color:#8B7355;font-size:0.78rem;cursor:pointer;text-decoration:underline;font-family:inherit">
+          Owner Login
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">Bella <span>Brew</span></div>
+    <p style="margin:0.5rem 0">Prabha Sadan, Gorepeth, Nagpur · <span>+91 96653 80500</span></p>
+    <p>© 2025 Bella Brew · Crafted with ☕ &amp; love in Nagpur</p>
+  </footer>
+
+</div><!-- end #siteWrapper -->
+
+<!-- =====================
+     OWNER LOGIN OVERLAY
+     ===================== -->
+<div id="ownerLoginOverlay">
+  <div class="login-modal">
+    <div class="brand">
+      <div class="logo">Bella <span>Brew</span></div>
+      <div class="sub">Owner Dashboard · Secure Login</div>
+    </div>
+
+    <!-- STEP 1: Phone -->
+    <div class="login-step" id="step1">
+      <div class="form-group">
+        <label class="field-label" style="font-size:0.75rem;font-weight:500;color:#8B7355;display:block;margin-bottom:6px;text-transform:uppercase;letter-spacing:.5px">
+          Phone Number
+        </label>
+        <input class="field-input" type="tel" id="phoneInput" placeholder="+91 96653 80500"
+          maxlength="13" style="width:100%;padding:11px 14px;border:1.5px solid rgba(107,62,38,0.2);border-radius:8px;font-size:0.95rem;outline:none;font-family:inherit;color:#2C1A0E;margin-bottom:1rem"
+          onkeyup="if(event.key==='Enter')sendOTP()">
+      </div>
+      <div class="form-err" id="phoneErr"></div>
+      <button class="btn-primary" style="width:100%;padding:12px" onclick="sendOTP()">Send OTP</button>
+      <button onclick="closeOwnerLogin()" style="width:100%;padding:10px;background:transparent;border:1px solid rgba(107,62,38,0.2);border-radius:8px;font-size:0.85rem;cursor:pointer;margin-top:8px;font-family:inherit;color:#8B7355">
+        Cancel
+      </button>
+    </div>
+
+    <!-- STEP 2: OTP -->
+    <div class="login-step" id="step2" style="display:none">
+      <p class="form-hint">OTP sent to <strong id="phoneSent"></strong><br>Enter the 6-digit code below.</p>
+      <div class="otp-boxes">
+        <input type="tel" maxlength="1" id="o0" onkeyup="otpKeyUp(this,0)" onkeydown="otpKeyDown(this,0,event)">
+        <input type="tel" maxlength="1" id="o1" onkeyup="otpKeyUp(this,1)" onkeydown="otpKeyDown(this,1,event)">
+        <input type="tel" maxlength="1" id="o2" onkeyup="otpKeyUp(this,2)" onkeydown="otpKeyDown(this,2,event)">
+        <input type="tel" maxlength="1" id="o3" onkeyup="otpKeyUp(this,3)" onkeydown="otpKeyDown(this,3,event)">
+        <input type="tel" maxlength="1" id="o4" onkeyup="otpKeyUp(this,4)" onkeydown="otpKeyDown(this,4,event)">
+        <input type="tel" maxlength="1" id="o5" onkeyup="otpKeyUp(this,5)" onkeydown="otpKeyDown(this,5,event)">
+      </div>
+      <div class="otp-timer">Resend in <span id="timerCount">30</span>s &nbsp;·&nbsp; <a href="#" onclick="resendOTP();return false" style="color:#6B3E26">Resend</a></div>
+      <div class="form-err" id="otpErr"></div>
+      <button class="btn-primary" style="width:100%;padding:12px" onclick="verifyOTP()">Verify &amp; Login</button>
+      <button onclick="goBackToPhone()" style="width:100%;padding:10px;background:transparent;border:1px solid rgba(107,62,38,0.2);border-radius:8px;font-size:0.85rem;cursor:pointer;margin-top:8px;font-family:inherit;color:#8B7355">
+        ← Change Number
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- =====================
+     OWNER DASHBOARD
+     ===================== -->
+<div id="dashboard">
+
+  <!-- Top bar -->
+  <div class="dash-top">
+    <div style="display:flex;align-items:center;gap:12px">
+      <button class="sidebar-toggle" onclick="toggleSidebar()" aria-label="Toggle sidebar">☰</button>
+      <div class="brand">Bella <span>Brew</span> — Dashboard</div>
+    </div>
+    <div class="dash-topright">
+      <span class="owner-tag">Owner</span>
+      <button class="btn-gold" style="font-size:0.78rem;padding:7px 16px" onclick="closeDashboard()">← View Site</button>
+      <button onclick="closeDashboard()" style="background:none;border:none;color:rgba(255,255,255,0.55);font-size:0.8rem;cursor:pointer;font-family:inherit" title="Logout">Logout</button>
+    </div>
+  </div>
+
+  <div class="dash-body">
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div class="sb-brand" style="padding:1rem 1.25rem;border-bottom:1px solid rgba(107,62,38,0.1);margin-bottom:.5rem">
+        <div style="font-size:0.85rem;font-weight:500;color:#6B3E26">Bella Brew</div>
+        <div style="font-size:0.72rem;color:#8B7355;margin-top:2px">Nagpur · Owner</div>
+      </div>
+      <span class="sb-label">Main</span>
+      <div class="sb-item active" data-panel="overview" onclick="showDashPanel('overview');this.parentNode.querySelectorAll('.sb-item').forEach(s=>s.classList.remove('active'));this.classList.add('active')">
+        <span class="ico">⊞</span><span>Overview</span>
+      </div>
+      <div class="sb-item" data-panel="bookings" onclick="showDashPanel('bookings');this.parentNode.querySelectorAll('.sb-item').forEach(s=>s.classList.remove('active'));this.classList.add('active')">
+        <span class="ico">📅</span><span>Bookings</span>
+      </div>
+      <span class="sb-label">Content</span>
+      <div class="sb-item" data-panel="menu" onclick="showDashPanel('menu');this.parentNode.querySelectorAll('.sb-item').forEach(s=>s.classList.remove('active'));this.classList.add('active')">
+        <span class="ico">☕</span><span>Menu</span>
+      </div>
+      <div class="sb-item" data-panel="gallery" onclick="showDashPanel('gallery');this.parentNode.querySelectorAll('.sb-item').forEach(s=>s.classList.remove('active'));this.classList.add('active')">
+        <span class="ico">🖼</span><span>Gallery</span>
+      </div>
+      <div class="sb-item" data-panel="reviews" onclick="showDashPanel('reviews');this.parentNode.querySelectorAll('.sb-item').forEach(s=>s.classList.remove('active'));this.classList.add('active')">
+        <span class="ico">★</span><span>Reviews</span>
+      </div>
+      <span class="sb-label">Config</span>
+      <div class="sb-item" data-panel="settings" onclick="showDashPanel('settings');this.parentNode.querySelectorAll('.sb-item').forEach(s=>s.classList.remove('active'));this.classList.add('active')">
+        <span class="ico">⚙</span><span>Settings</span>
+      </div>
+      <div class="sb-logout">
+        <button class="btn-logout" onclick="closeDashboard()">← Back to Site</button>
+      </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="dash-main">
+
+      <!-- OVERVIEW PANEL -->
+      <div class="dash-panel active" id="dp-overview">
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="stat-val" id="ov-total">6</div>
+            <div class="stat-lbl">Total Bookings</div>
+            <div class="stat-chg chg-up">↑ This week</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val" id="ov-pending">3</div>
+            <div class="stat-lbl">Pending</div>
+            <div class="stat-chg chg-warn">Needs action</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val" id="ov-today">0</div>
+            <div class="stat-lbl">Today's Guests</div>
+            <div class="stat-chg chg-up">↑ vs yesterday</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val">3.9★</div>
+            <div class="stat-lbl">Avg Rating</div>
+            <div class="stat-chg chg-up">409 reviews</div>
+          </div>
+        </div>
+        <div class="dash-card">
+          <div class="dash-card-head">
+            <h3>Recent Bookings</h3>
+            <button class="filter-tab" onclick="showDashPanel('bookings');document.querySelectorAll('.sb-item').forEach(s=>s.classList.remove('active'));document.querySelector('[data-panel=bookings]').classList.add('active')">View all →</button>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Customer</th><th>Date</th><th>Guests</th><th>Occasion</th><th>Status</th><th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="ovTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- BOOKINGS PANEL -->
+      <div class="dash-panel" id="dp-bookings">
+        <div class="dash-card">
+          <div class="dash-card-head">
+            <h3>All Bookings</h3>
+            <div class="filter-tabs">
+              <button class="filter-tab active" onclick="filterBookings('all',this)">All</button>
+              <button class="filter-tab" onclick="filterBookings('Pending',this)">Pending</button>
+              <button class="filter-tab" onclick="filterBookings('Confirmed',this)">Confirmed</button>
+              <button class="filter-tab" onclick="filterBookings('Done',this)">Completed</button>
+              <button class="filter-tab" onclick="filterBookings('Cancelled',this)">Cancelled</button>
+            </div>
+          </div>
+          <div class="table-scroll">
+            <table>
+              <thead>
+                <tr>
+                  <th>Customer</th><th>Phone</th><th>Date</th><th>Time</th><th>Guests</th><th>Occasion</th><th>Status</th><th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="bookTable"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- MENU PANEL -->
+      <div class="dash-panel" id="dp-menu">
+        <div class="dash-card">
+          <div class="dash-card-head">
+            <h3>Menu Items</h3>
+            <span style="font-size:0.78rem;color:#8B7355">Toggle to show/hide items on website</span>
+          </div>
+          <div class="menu-mgmt-grid" id="menuMgmtGrid"></div>
+        </div>
+      </div>
+
+      <!-- GALLERY PANEL -->
+      <div class="dash-panel" id="dp-gallery">
+        <div class="dash-card">
+          <div class="dash-card-head">
+            <h3>Photo Gallery</h3>
+            <button class="filter-tab" onclick="document.getElementById('galMgmtInput').click()">+ Upload Photos</button>
+            <input type="file" id="galMgmtInput" accept="image/*" multiple style="display:none">
+          </div>
+          <div class="gal-mgmt-grid" id="galMgmtGrid"></div>
+        </div>
+      </div>
+
+      <!-- REVIEWS PANEL -->
+      <div class="dash-panel" id="dp-reviews">
+        <div class="dash-card">
+          <div class="dash-card-head">
+            <h3>Customer Reviews</h3>
+            <div class="filter-tabs">
+              <button class="filter-tab active" onclick="filterReviewsMgmt('all',this)">All</button>
+              <button class="filter-tab" onclick="filterReviewsMgmt('visible',this)">Visible</button>
+              <button class="filter-tab" onclick="filterReviewsMgmt('hidden',this)">Hidden</button>
+            </div>
+          </div>
+          <div style="padding:1.25rem" id="reviewsMgmt"></div>
+        </div>
+      </div>
+
+      <!-- SETTINGS PANEL -->
+      <div class="dash-panel" id="dp-settings">
+        <div class="settings-block">
+          <h3>Café Details</h3>
+          <div class="form-row">
+            <div class="form-group"><label>Café Name</label><input type="text" value="Bella Brew"></div>
+            <div class="form-group"><label>Phone</label><input type="tel" value="+91 96653 80500"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Address</label><input type="text" value="Prabha Sadan, Gorepeth, Nagpur"></div>
+            <div class="form-group"><label>Email</label><input type="email" value="hello@bellabrew.in"></div>
+          </div>
+          <div class="form-row">
+            <div class="form-group"><label>Instagram</label><input type="text" value="@bellabrewnagpur"></div>
+            <div class="form-group"><label>Zomato Link</label><input type="url" placeholder="https://zomato.com/..."></div>
+          </div>
+        </div>
+
+        <div class="settings-block">
+          <h3>Opening Hours</h3>
+          <div class="form-row">
+            <div class="form-group"><label>Opening Time</label><input type="time" value="12:00"></div>
+            <div class="form-group"><label>Closing Time</label><input type="time" value="23:00"></div>
+          </div>
+        </div>
+
+        <div class="settings-block">
+          <h3>Features</h3>
+          <div class="settings-row">
+            <div><div class="settings-row-label">Accept online bookings</div><div class="settings-row-desc">Allow customers to book tables from website</div></div>
+            <label class="toggle-sw"><input type="checkbox" checked><span class="toggle-sl"></span></label>
+          </div>
+          <div class="settings-row">
+            <div><div class="settings-row-label">Show menu on website</div><div class="settings-row-desc">Display menu items to visitors</div></div>
+            <label class="toggle-sw"><input type="checkbox" checked><span class="toggle-sl"></span></label>
+          </div>
+          <div class="settings-row">
+            <div><div class="settings-row-label">Allow guest reviews</div><div class="settings-row-desc">Let customers post reviews publicly</div></div>
+            <label class="toggle-sw"><input type="checkbox" checked><span class="toggle-sl"></span></label>
+          </div>
+          <div class="settings-row">
+            <div><div class="settings-row-label">SMS on new booking</div><div class="settings-row-desc">Get notified when a table is booked</div></div>
+            <label class="toggle-sw"><input type="checkbox" checked><span class="toggle-sl"></span></label>
+          </div>
+        </div>
+
+        <button class="btn-primary" style="padding:12px 32px" onclick="saveSettings()">Save All Changes</button>
+        <div id="settingsToast" class="toast" style="display:none;max-width:300px"></div>
+      </div>
+
+    </div><!-- end dash-main -->
+  </div><!-- end dash-body -->
+</div><!-- end #dashboard -->
+
+<script src="js/app.js"></script>
+</body>
+</html>
