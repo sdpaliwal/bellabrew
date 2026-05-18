@@ -598,6 +598,7 @@ footer span { color: var(--gold); }
   border: 1.5px solid rgba(107,62,38,0.2);
   border-radius: 8px; font-size: 1.2rem;
   font-weight: 500; color: var(--text);
+   width: 0; /* Add this to allow the inputs to shrink properly */
 }
 .otp-boxes input:focus { border-color: var(--brown); outline: none; }
 
